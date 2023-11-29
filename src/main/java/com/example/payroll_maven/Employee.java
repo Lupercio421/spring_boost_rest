@@ -11,7 +11,7 @@ import jakarta.persistence.Id;
 @Entity
 public class Employee {
     private @Id @GeneratedValue Long id;
-//    private String name;
+
     private String firstName;
     private String lastName;
     private String role;
@@ -21,7 +21,6 @@ public class Employee {
     Employee(String firstName, String lastName, String role) {
         this.firstName = firstName;
         this.lastName = lastName;
-//        this.name = name;
         this.role = role;
     }
 
@@ -35,11 +34,6 @@ public class Employee {
         this.firstName = parts[0].trim();
         this.lastName = parts[1].trim();
     }
-
-//        public void setName(String name) {
-//        this.name = name;
-//    }
-
 
     public Long getId(){
         return this.id;
